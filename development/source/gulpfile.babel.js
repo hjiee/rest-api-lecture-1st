@@ -10,14 +10,17 @@ const envPath = './.env'
 
 const paths = {
   js: [
+    'bin/www',
     './**/*.js',
-    '!node_modules/**'
+    '!node_modules/**',
+    '!coverage/**'
   ],
   nonJs: [
     './package-lock.json',
-    './package.json'
+    './package.json',
+    './.sequelizerc',
+    './**/*.ejs'
   ]
-  //tests: './tests/*.js',
 }
 
 // Clean up dist and coverage directory
