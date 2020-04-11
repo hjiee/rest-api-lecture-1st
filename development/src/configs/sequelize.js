@@ -47,18 +47,19 @@ module.exports = {
     logging: process.env.TEST_DB_LOGGING === 'true'
   },
   production: {
-    replication: {
-      read: [
-        {
-          host: process.env.PROD_DB_HOST_SLV
-        }
-      ],
-      write: {
-        host: process.env.PROD_DB_HOST_MST
-      }
-    },
+    // replication: {
+    //   read: [
+    //     {
+    //       host: process.env.PROD_DB_HOST_SLV
+    //     }
+    //   ],
+    //   write: {
+    //     host: process.env.PROD_DB_HOST_MST
+    //   }
+    // },
     username: process.env.PROD_DB_USER,
     password: process.env.PROD_DB_PW,
+    host : process.env.PROD_DB_HOST,
     database: process.env.PROD_DB,
     port: process.env.PROD_DB_PORT,
     dialect,
